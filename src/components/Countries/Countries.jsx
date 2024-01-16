@@ -12,7 +12,7 @@ const Countries = ({ country }) => {
     const { name,flags,population,cca2} = country;
    
     return (
-        <div className='country'>
+        <div className={`country ${visited?'visited':'non-visited'}`}>
            
             <img src={flags.png} alt="It is a country a image " srcSet="" />
             <p>My country name  is{name?.common} </p>
