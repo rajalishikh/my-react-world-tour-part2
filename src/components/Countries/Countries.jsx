@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import '.\\Country.css';
-const Countries = ({ country }) => {
+const Countries = ({ country,handleVisited2 }) => {
    
   
     console.log(country)
+    console.log(handleVisited2)
     const [visited, setVisited] = useState(false);
     const handleVisited = ()=>{
         setVisited(!visited);
@@ -18,7 +19,8 @@ const Countries = ({ country }) => {
             <p>My country name  is{name?.common} </p>
             <p>population of my country is {population}</p>
             <p>The code of my country is {cca2}</p>
-            <button onClick={handleVisited}>{visited?'Visited':'going' }</button>
+            <button onClick={handleVisited}>{visited ? 'Visited' : 'going'}</button>
+            {/* <button onClick={}></button> */}
             {
                 visited ?'I  am  visited this country ':'I want to visited this country '
             }
